@@ -1,6 +1,6 @@
 # Background-Management-Subsystem
-后台管理子系统
-###各文件夹对应页面，小组成员将自己负责的页面提交到对应文件中
+后台管理子系统  
+### 各文件夹对应页面，小组成员将自己负责的页面提交到对应文件中
 MuseumManage博物馆管理  
 ExhibitionManage展览管理  
 CollectionManage藏品管理  
