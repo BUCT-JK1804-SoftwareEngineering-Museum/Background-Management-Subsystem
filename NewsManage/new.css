@@ -1,0 +1,57 @@
+.content{
+    margin: 20px 30px 40px;
+    background-color: #fff;
+}
+.searchContent{
+    display: flex;
+    justify-content: space-around;
+}
+.tableStyle{
+    margin: 10px auto;
+    width: 90%;
+}
+.tableStyle tr td{
+    line-height: 100%;
+}
+.buttonStyle{
+    color:#fff;
+}
+.form-horizontal{
+    width: 90%;
+    margin: 10px auto;
+}
+.radio{
+    width: 20%;
+    display: flex!important;
+    justify-content: space-around;
+}
+.radio2{
+    width: 40%!important;
+}
+.breadcrumb{
+    text-align: left;
+}
+.avaterStyle{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+#searchBorder{
+    display: flex;
+    justify-content: center;
+}
+#choiceBorder{
+    width: 30%;
+}
+
+.newOrg{
+    width: 100px !important;
+}
+#showMag{
+    width: 100%;
+}
+#showMag tr td{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    /*white-space: nowrap;*/
+}
