@@ -139,12 +139,18 @@ if ($res) {
             <div class="path">
                 <ol class="breadcrumb">
                     <li><a href="../index.php">后台管理</a></li>
-                    <li><a href="news.php">评论管理</a></li>
-                    <li class="active">修改评论</li>
+                    <li><a href="news.php">新闻管理</a></li>
+                    <li class="active">修改新闻</li>
                 </ol>
             </div>
             <form class="form-horizontal" action="modify.php" method="post" enctype="multipart/form-data">
-
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-1 control-label">新闻编号</label>
+                    <div class="col-sm-10">
+                        <input  class="form-control" id="inputPassword3" value="<?=$v['new_id']?>" name="nid">
+                        <input type="hidden" name="oldnid" readonly value=<?=$v["new_id"]?>>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-1 control-label">博物馆编号</label>
                     <div class="col-sm-10">
@@ -176,9 +182,9 @@ if ($res) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-1 control-label">新闻图片</label>
+                    <label for="exampleInputFile" class="col-sm-1 control-label">新闻图片</label>
                     <div class="col-sm-10">
-                        <input  class="form-control" id="inputPassword3" value="<?=$v['new_pic']?>" name="npi">
+                        <input type="file" id="file" name="npi">
                     </div>
                 </div>
                 <div class="form-group">
