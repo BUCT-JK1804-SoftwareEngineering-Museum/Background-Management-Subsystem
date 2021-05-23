@@ -21,8 +21,6 @@ error_reporting(0);//关闭所有的错误信息，不会显示，如果清除�
 ini_set('log_errors','on');
 error_log('示例的错误信息');
 
-$oldcid=$_POST['oldcid'];
-$cid=$_POST['cid'];
 $mid=$_POST['mid'];
 $cgr=$_POST['cgr'];
 $uid=$_POST['uid'];
@@ -30,7 +28,7 @@ $mna=$_POST['mna'];
 $cin=$_POST['cin'];
 $ctime=date("Y-m-d H:i:s");
 
-$sql="UPDATE Comment SET com_id='$cid',mus_id='$mid',com_grade='$cgr',user_id='$uid',mus_name='$mna',com_info='$cin',com_time='$ctime' WHERE com_id='$oldcid'";
+$sql="UPDATE Comment SET mus_id='$mid',com_grade='$cgr',user_id='$uid',mus_name='$mna',com_info='$cin',com_time='$ctime' WHERE user_id='$uid'";
 
 $res=$conn->query($sql);
 if ($res) {

@@ -25,10 +25,10 @@ $mid=$_POST['mid'];
 $cgr=$_POST['cgr'];
 $uid=$_POST['uid'];
 $mna=$_POST['mna'];
+$cin=$_POST['cin'];
 $ctime=date("Y-m-d H:i:s");
 
-$flag=1;
-        $sql="SELECT * FROM `Comment` order by com_id desc limit 1";
+        $sql="SELECT * FROM Comment order by com_id desc limit 1";
         $res=$conn->query($sql);
         $sqll=mysqli_fetch_array($res);
         $cid=(int)$sqll["com_id"]+1;
