@@ -134,6 +134,7 @@ if (empty($_SESSION["username"])) {
                 </ol>
             </div>
             <form class="form-horizontal" action="add.php" method="post" enctype="multipart/form-data">
+
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-1 control-label">博物馆编号</label>
                     <div class="col-sm-10">

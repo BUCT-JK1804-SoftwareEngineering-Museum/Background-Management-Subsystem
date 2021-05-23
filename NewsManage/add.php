@@ -21,11 +21,7 @@ error_reporting(0);//关闭所有的错误信息，不会显示，如果清除�
 ini_set('log_errors','on');
 error_log('示例的错误信息');
 
-$sql2="SELECT * FROM `New` order by new_id desc limit 1";
-$res2=$conn->query($sql2);
-$sqll2=mysqli_fetch_array($res2);
-$nid=(int)$sqll2["new_id"]+1;
-
+$nid=$_POST['nid'];
 $mid=$_POST['mid'];
 $npu=$_POST['npu'];
 $ntime=$_POST['ntime'];
@@ -35,8 +31,10 @@ $npi=$_POST['npi'];
 $nso=$_POST['nso'];
 $nle=$_POST['nle'];
 
-$flag=1;
-
+$sql="SELECT * FROM New order by new_id desc limit 1";
+$res=$conn->query($sql);
+$sqll=mysqli_fetch_array($res);
+$nid=(int)$sqll["new_id"]+1;
 
         $sql="INSERT INTO New(new_id, mus_id,new_publisher,new_time,new_title,new_content,new_pic,new_source,new_level)VALUES ('$nid','$mid','$npu','$ntime','$nti','$nco','$npi','$nso','$nle')";
 
@@ -47,7 +45,7 @@ $flag=1;
             echo '<script>alert("添加成功！");window.location="news.php"</script>';
         }else{
             ini_set('error_log',"$filePath");
-            error_log($username." 添加新闻"." ip地址:".$_SERVER['REMOTE_ADDR']."添加新闻:".$nid."失败 ".date("Y-m-d H:i:s"));
-             echo '<script>alert("添加失败");history.go(-1);</script>';
+            error_log($username." 添加新闻"." ip地址:".$_SERVER['REMOTE_ADDR']."添加评论:".$nid."失败 ".date("Y-m-d H:i:s"));
+            echo '<script>alert("添加失败");history.go(-1);</script>';
         }
 ?>

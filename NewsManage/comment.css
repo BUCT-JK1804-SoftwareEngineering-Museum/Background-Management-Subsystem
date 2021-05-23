@@ -43,15 +43,3 @@
 #choiceBorder{
     width: 30%;
 }
-
-.newOrg{
-    width: 100px !important;
-}
-#showMag{
-    width: 100%;
-}
-#showMag tr td{
-    overflow: hidden;
-    text-overflow:ellipsis;
-    /*white-space: nowrap;*/
-}

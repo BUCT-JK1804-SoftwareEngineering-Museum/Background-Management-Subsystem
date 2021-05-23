@@ -20,7 +20,7 @@ if (empty($_SESSION["username"])) {
  }
 
 //分页
-$pageSize = 5;//每一页面内容大小
+$pageSize = 3;//每一页面内容大小
 $res="select * from New limit 100";
 $sql=$conn->query($res);
 $num=mysqli_num_rows($sql);
