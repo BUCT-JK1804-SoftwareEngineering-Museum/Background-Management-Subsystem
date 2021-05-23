@@ -145,6 +145,13 @@ if ($res) {
             </div>
             <form class="form-horizontal" action="modify.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-1 control-label">评论编号</label>
+                    <div class="col-sm-10">
+                        <input  class="form-control" id="inputPassword3" value="<?=$v['com_id']?>" name="cid">
+                        <input type="hidden" name="oldcid" readonly value=<?=$v["com_id"]?>>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="inputPassword3" class="col-sm-1 control-label">博物馆编号</label>
                     <div class="col-sm-10">
                         <input  class="form-control" id="inputPassword3" value="<?=$v['mus_id']?>" name="mid">
